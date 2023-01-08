@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="shortcut icon" href="./static/memory.png" type="image/x-icon" />
+    <link rel="styleSheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="starting">
+      <div class="press">
+        <img src="./static/press to start.png" alt="start game" />
+      </div>
+      <input id="name" type="text" placeholer="YourName" />
+      <span id="start">Start Game</span>
+    </div>
+    <div id="failing" class="failing">
+      <img src="./static/game-over.jpg" alt="game-over" />
+    </div>
+    <div class="info">
+      <ul class="name">
+        <li>Hello : <span></span></li>
+      </ul>
+      <li id="time"><span>160</span> Seconds</li>
+      <ul class="try">
+        <li>Wrong Tries : <span>0</span></li>
+      </ul>
+    </div>
+    <div class="game-memory">
+      <div class="game" data-action="action">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/1.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="action">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/1.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="flower">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/2.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="flower">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/2.jpg" />
+        </div>
+      </div>
+      <div class="game" data-fox="dog">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/3.jpg" />
+        </div>
+      </div>
+      <div class="game" data-fox="dog">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/3.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="cheetah">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/4.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="cheetah">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/4.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="fruit">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/5.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="fruit">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/5.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="star">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/6.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="star">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/6.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="wall">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/7.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="wall">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/7.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="woody">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/8.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="woody">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/8.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="onep">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/9.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="onep">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/9.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="fox">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/10.jpg" />
+        </div>
+      </div>
+      <div class="game" data-action="fox">
+        <div class="front"></div>
+        <div class="back">
+          <img src="./static/10.jpg" />
+        </div>
+      </div>
+    </div>
+    <audio id="fail" preload="auto" src="./sounds/fail.mp3"></audio>
+    <audio id="letsGo" preload="auto" src="./sounds/let's go.mp3"></audio>
+    <audio id="success" preload="auto" src="./sounds/success.mp3"></audio>
+    <audio id="gameOver" src="./sounds/game-over.mp3" preload="auto"></audio>
+    <audio id="fast" src="./sounds/clock.mp3" preload="auto"></audio>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div.starting {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 169, 244, 0.9);
+  height: 100%;
+  width: 100%;
+}
+
+div.starting img {
+  width: 500px;
+  animation: show 2s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+span#start {
+  color: white;
+  background-color: #f44336;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px 15px;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 6px;
+  transition: 0.5s linear;
+  margin: 0 0 50px 40px;
+}
+
+div.starting input {
+  outline: none;
+  display: block;
+  margin-bottom: 50px;
+  background-color: #6636325b;
+  text-align: center;
+  caret-color: #f44336;
+  color: white;
+  padding: 20px;
+  font-size: 19px;
+  border: none;
+}
+
+span#start:hover {
+  color: yellow;
+  background-color: #f8392b;
+}
+
+div.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin: 0 40px;
+  border: solid 2px #2196f3;
+}
+
+ul.name span {
+  color: rgba(123, 157, 173, 0.9);
+  font-weight: bold;
+  text-shadow: 1px 1px 0px black;
+}
+
+ul.try span {
+  color: #f44336;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+}
+
+div.game-memory {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.game-memory.stop-click {
+  pointer-events: none;
+}
+
+div.game {
+  margin: 10px 32px;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 138px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.rotate,
+.match {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 200px;
+  height: 138px;
+}
+
+div.game div.front,
+div.game div.back {
+  position: absolute;
+  width: 200px;
+  height: 138px;
+}
+
+div.game div.back {
+  z-index: 1;
+  border: solid 3px #2196f3;
+  overflow: hidden;
+}
+div.game div.front {
+  background-color: #333;
+  border: solid 3px #2196f3;
+  z-index: 3;
+  backface-visibility: hidden;
+}
+
+div.game div.front::before {
+  content: "!";
+  color: white;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 150px;
+}
+
+div.failing {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+div.failing img {
+  width: 100%;
+  height: 100%;
+}
