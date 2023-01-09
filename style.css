@@ -77,6 +77,13 @@ div.info {
   border: solid 2px #2196f3;
 }
 
+@media (max-width: 690px) {
+  div.info {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 ul.name span {
   color: rgba(123, 157, 173, 0.9);
   font-weight: bold;
@@ -94,6 +101,13 @@ div.game-memory {
   flex-wrap: wrap;
 }
 
+@media (max-width: 690px) {
+  div.game-memory {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
 div.game-memory.stop-click {
   pointer-events: none;
 }
@@ -108,6 +122,13 @@ div.game {
   transform-style: preserve-3d;
 }
 
+@media (max-width: 690px) {
+  div.game {
+    width: 100px;
+    height: 80px;
+  }
+}
+
 .rotate,
 .match {
   transform: rotateY(180deg);
@@ -118,11 +139,26 @@ img {
   height: 138px;
 }
 
+@media (max-width: 690px) {
+  img {
+    width: 100px;
+    height: 80px;
+  }
+}
+
 div.game div.front,
 div.game div.back {
   position: absolute;
   width: 200px;
   height: 138px;
+}
+
+@media (max-width: 690px) {
+  div.game div.front,
+  div.game div.back {
+    width: 100px;
+    height: 80px;
+  }
 }
 
 div.game div.back {
@@ -145,6 +181,13 @@ div.game div.front::before {
   justify-content: center;
   align-items: center;
   line-height: 150px;
+}
+
+@media (max-width: 690px) {
+  div.game div.front::before {
+    font-size: 40px;
+    line-height: 70px;
+  }
 }
 
 div.failing {
